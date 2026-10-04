@@ -1,0 +1,54 @@
+@import "tailwindcss";
+
+@layer base {
+  html {
+    scroll-behavior: smooth;
+    font-family: 'Plus Jakarta Sans', system-ui, sans-serif;
+  }
+  body {
+    margin: 0;
+    min-width: 320px;
+  }
+  button {
+    font: inherit;
+  }
+}
+
+.font-romantic {
+  font-family: 'Dancing Script', cursive;
+}
+
+.font-serif-elegant {
+  font-family: 'Playfair Display', Georgia, serif;
+}
+
+@keyframes float {
+  0%, 100% { transform: translateY(0px) rotate(0deg); }
+  50% { transform: translateY(-10px) rotate(1.5deg); }
+}
+
+@keyframes flame {
+  0%, 100% { transform: scale(1) rotate(-2deg); opacity: 0.95; }
+  50% { transform: scale(1.18) rotate(2deg); opacity: 1; filter: drop-shadow(0 0 10px #f59e0b); }
+}
+
+@keyframes vinylSpin {
+  from { transform: rotate(0deg); }
+  to { transform: rotate(360deg); }
+}
+
+.animate-float {
+  animation: float 4s ease-in-out infinite;
+}
+
+.animate-flame {
+  animation: flame 0.7s ease-in-out infinite alternate;
+}
+
+.animate-vinyl {
+  animation: vinylSpin 4s linear infinite;
+}
+
+.paused {
+  animation-play-state: paused !important;
+}
