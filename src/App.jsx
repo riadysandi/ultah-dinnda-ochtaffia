@@ -477,6 +477,11 @@ function MusicPlayer({ startSignal }) {
 
   const getAudio = () => {
     const nextAudio = audio || new Audio("/jamrud-selamat-ulang-tahun.mp3");
+    nextAudio.onerror = () => {
+      nextAudio.onerror = null;
+      nextAudio.src = "/music.wav";
+      if (playing) nextAudio.play().catch(() => {});
+    };
     nextAudio.loop = true;
     nextAudio.volume = 0.42;
     if (!audio) setAudio(nextAudio);
