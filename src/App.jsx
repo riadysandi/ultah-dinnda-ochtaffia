@@ -476,7 +476,7 @@ function MusicPlayer({ startSignal }) {
   const [muted, setMuted] = useState(false);
 
   const getAudio = () => {
-    const nextAudio = audio || new Audio("/jamrud-selamat-ulang-tahun.mp3");
+    const nextAudio = audio || new Audio("/Jamrud - Selamat Ulang Tahun.mp3");
     nextAudio.onerror = () => {
       nextAudio.onerror = null;
       nextAudio.src = "/music.wav";
